@@ -1,11 +1,11 @@
-# WhatsApp Business — InterFácil
+# WhatsApp Business — M2SEC Interfácil
 
 ## Nome de exibição
-InterFácil — Crédito Facilitado
+M2SEC Interfácil — Crédito Facilitado
 
 ## Mensagem de saudação (configurar em Ferramentas Comerciais > Mensagens de saudação)
 ```
-Olá! 👋 Seja bem-vindo(a) à InterFácil.
+Olá! 👋 Seja bem-vindo(a) à M2SEC Interfácil.
 Ajudamos autônomos, informais e quem está com o nome sujo a encontrar crédito com alta chance de aprovação — sem burocracia.
 
 Pra começar, me conta rapidinho:
@@ -22,8 +22,8 @@ Obrigado pela mensagem! No momento estou fora do horário de atendimento (seg a 
 ```
 
 ## Respostas rápidas sugeridas (atalhos /)
-- `/catalogo` → envia o PDF `catalogo_interfacil.pdf`
-- `/comofunciona` → "A InterFácil não empresta dinheiro diretamente. Analisamos seu perfil e indicamos a fintech parceira com maior chance de aprovação pra você. Você contrata direto com eles, com total transparência de taxas."
+- `/catalogo` → envia o PDF `catalogo_m2sec_interfacil.pdf`
+- `/comofunciona` → "A M2SEC Interfácil não empresta dinheiro diretamente. Analisamos seu perfil e indicamos a fintech parceira com maior chance de aprovação pra você. Você contrata direto com eles, com total transparência de taxas."
 - `/semtaxa` → "Nosso serviço de indicação é gratuito pra você. Recebemos apenas da fintech quando sua indicação é aprovada."
 
 ## Catálogo (WhatsApp Business > Catálogo)

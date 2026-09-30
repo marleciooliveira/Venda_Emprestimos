@@ -1,8 +1,8 @@
-# Campanha Instagram — InterFácil
+# Campanha Instagram — M2SEC Interfácil
 
 ## Bio do perfil
 ```
-InterFácil 🔓
+M2SEC Interfácil 🔓
 Consultoria de crédito
 🔎 Comparamos as melhores fintechs pra quem tem nome sujo, é autônomo ou informal.
 👇 Fale com a gente agora
@@ -19,7 +19,7 @@ Consultoria de crédito
 
 ## Post 1 — Carrossel de apresentação
 **Slide 1 (capa):** "Nome sujo? Autônomo? Aqui você consegue crédito mesmo assim 🔓"
-**Slide 2:** "A InterFácil pesquisa e compara as fintechs mais confiáveis do mercado"
+**Slide 2:** "A M2SEC Interfácil pesquisa e compara as fintechs mais confiáveis do mercado"
 **Slide 3:** "Não precisa ser servidor público. Não precisa ter carteira assinada."
 **Slide 4:** "Você fala com a gente, a gente indica a opção com mais chance de aprovação pro seu perfil"
 **Slide 5 (CTA):** "Manda mensagem no WhatsApp agora 👇 [link]"
@@ -28,7 +28,7 @@ Consultoria de crédito
 ```
 Cansado de ser recusado só porque o nome tá sujo? 😮‍💨
 
-A InterFácil existe pra isso: a gente pesquisa entre várias fintechs e indica quem realmente tem chance de aprovar o SEU perfil — autônomo, informal, sem carteira assinada, sem ser servidor público.
+A M2SEC Interfácil existe pra isso: a gente pesquisa entre várias fintechs e indica quem realmente tem chance de aprovar o SEU perfil — autônomo, informal, sem carteira assinada, sem ser servidor público.
 
 Sem enrolação, sem taxa escondida. Você fala com a gente no WhatsApp e a gente te ajuda a encontrar o caminho certo. 🔓
 
@@ -46,7 +46,7 @@ Sem enrolação, sem taxa escondida. Você fala com a gente no WhatsApp e a gent
 2. Pedir em plataforma errada pro seu perfil (ex: banco que só aceita servidor público)
 3. Não comparar — pegar a primeira oferta sem checar se é a mais barata
 
-**CTA final:** "É exatamente por isso que existe a InterFácil: a gente já sabe qual fintech combina com cada perfil. Fala com a gente 👇"
+**CTA final:** "É exatamente por isso que existe a M2SEC Interfácil: a gente já sabe qual fintech combina com cada perfil. Fala com a gente 👇"
 
 ---
 
