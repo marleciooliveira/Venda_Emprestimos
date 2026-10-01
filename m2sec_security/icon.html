@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>M2SEC Security - Ícone</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 600px;
+    height: 600px;
+    background:
+      radial-gradient(circle at 50% 42%, #1b2230 0%, #0c0f16 60%, #040509 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-wrap {
+    width: 380px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 14px 30px rgba(0,0,0,0.6));
+  }
+</style>
+</head>
+<body>
+  <div class="icon-wrap">
+    <svg width="380" height="380" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#f8e8b0"/>
+          <stop offset="45%" stop-color="#d4af37"/>
+          <stop offset="100%" stop-color="#8c6c1f"/>
+        </linearGradient>
+        <linearGradient id="silver" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#f4f6f8"/>
+          <stop offset="50%" stop-color="#c4cad4"/>
+          <stop offset="100%" stop-color="#8a909c"/>
+        </linearGradient>
+        <linearGradient id="shieldFill" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#232a3a"/>
+          <stop offset="100%" stop-color="#0e121c"/>
+        </linearGradient>
+      </defs>
+      <path d="M100,8
+               C130,8 160,20 180,35
+               L180,112
+               C180,168 145,208 100,233
+               C55,208 20,168 20,112
+               L20,35
+               C40,20 70,8 100,8 Z"
+            fill="url(#shieldFill)"
+            stroke="url(#gold)"
+            stroke-width="5"/>
+      <path d="M100,18
+               C126,18 152,28 169,41
+               L169,111
+               C169,160 139,196 100,219
+               C61,196 31,160 31,111
+               L31,41
+               C48,28 74,18 100,18 Z"
+            fill="none"
+            stroke="url(#silver)"
+            stroke-width="1.5"
+            opacity="0.5"/>
+      <rect x="76" y="118" width="48" height="40" rx="7" fill="url(#gold)"/>
+      <path d="M84,118 L84,100 C84,87 93,78 100,78 C107,78 116,87 116,100 L116,118"
+            fill="none" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="100" cy="135" r="6" fill="#0e121c"/>
+      <rect x="97" y="138" width="6" height="12" rx="2" fill="#0e121c"/>
+    </svg>
+  </div>
+</body>
+</html>
