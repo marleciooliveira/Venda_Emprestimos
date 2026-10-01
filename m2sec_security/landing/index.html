@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M2SEC Security — Remova seu nome do Google, Escavador e Jusbrasil</title>
+<meta name="description" content="Proteção de dados e privacidade digital. Removemos seus dados pessoais do Google, Escavador e Jusbrasil com base na LGPD. Diagnóstico gratuito em 10 minutos.">
+<style>
+  :root{
+    --bg:#040509; --bg2:#0c0f16; --bg3:#161c2a; --border:#2a3040;
+    --gold-1:#f8e8b0; --gold-2:#d4af37; --gold-3:#8c6c1f;
+    --silver:#c4cad4; --text:#f3f4f6; --muted:#9aa1b0; --muted2:#6b7280;
+    --green:#3fb97f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Segoe UI',Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  .gold-text{
+    background:linear-gradient(180deg,var(--gold-1) 0%,var(--gold-2) 45%,var(--gold-3) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:16px 28px;border-radius:12px;font-weight:700;font-size:16px;
+    cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease;
+    text-align:center;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-gold{
+    background:linear-gradient(180deg,var(--gold-1) 0%,var(--gold-2) 60%,var(--gold-3) 100%);
+    color:#0c0f16;box-shadow:0 10px 30px rgba(212,175,55,0.25);
+  }
+  .btn-ghost{
+    background:rgba(255,255,255,0.04);
+    color:var(--text);
+    border:1.5px solid var(--border);
+  }
+  .btn-whatsapp{
+    background:linear-gradient(180deg,#3fdc8f,#1e9e5f);
+    color:#06130c;box-shadow:0 10px 30px rgba(63,185,127,0.25);
+  }
+  section{padding:80px 0;}
+  .pill{
+    display:inline-block;padding:6px 16px;border-radius:999px;
+    border:1px solid rgba(212,175,55,0.35);color:var(--gold-2);
+    font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    background:rgba(212,175,55,0.07);
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(4,5,9,0.85);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;}
+  .brand svg{width:32px;height:32px;}
+  nav .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted);}
+  nav .nav-links a:hover{color:var(--text);}
+  .nav-cta{display:flex;gap:12px;}
+  .nav-cta .btn{padding:10px 18px;font-size:14px;}
+  @media (max-width:760px){ nav .nav-links{display:none;} }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:100px 0 90px;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(212,175,55,0.08), transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(212,175,55,0.05), transparent 45%);
+    text-align:center;
+    position:relative;
+  }
+  .hero h1{
+    font-size:52px;font-weight:800;letter-spacing:-1.2px;line-height:1.15;
+    max-width:780px;margin:22px auto 20px;
+  }
+  .hero p.lead{
+    font-size:19px;color:var(--muted);max-width:620px;margin:0 auto 38px;
+  }
+  .hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:28px;}
+  .hero-trust{font-size:13px;color:var(--muted2);}
+  .hero-icon{width:84px;height:84px;margin:0 auto;filter:drop-shadow(0 14px 26px rgba(0,0,0,.5));}
+  @media (max-width:760px){ .hero h1{font-size:34px;} .hero p.lead{font-size:16px;} }
+
+  /* ---------- LOGOS/PROOF STRIP ---------- */
+  .proof-strip{
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    padding:26px 0;background:var(--bg2);
+  }
+  .proof-strip .wrap{
+    display:flex;justify-content:center;gap:40px;flex-wrap:wrap;
+    color:var(--muted);font-size:14px;font-weight:600;letter-spacing:.5px;
+  }
+  .proof-strip strong{color:var(--text);}
+
+  /* ---------- SECTION HEAD ---------- */
+  .sec-head{text-align:center;max-width:620px;margin:0 auto 52px;}
+  .sec-head .pill{margin-bottom:16px;}
+  .sec-head h2{font-size:34px;font-weight:800;letter-spacing:-.6px;margin-bottom:14px;}
+  .sec-head p{color:var(--muted);font-size:16px;}
+
+  /* ---------- PROBLEM / HOW IT WORKS ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .step-card{
+    background:var(--bg2);border:1px solid var(--border);border-radius:16px;
+    padding:30px 26px;
+  }
+  .step-num{
+    width:40px;height:40px;border-radius:50%;
+    background:linear-gradient(180deg,var(--gold-1),var(--gold-3));
+    color:#0c0f16;font-weight:800;display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;font-size:16px;
+  }
+  .step-card h3{font-size:18px;margin-bottom:10px;}
+  .step-card p{color:var(--muted);font-size:14.5px;}
+  @media (max-width:760px){ .steps{grid-template-columns:1fr;} }
+
+  /* ---------- TWO PATHS ---------- */
+  .paths{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .path-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .path-card{
+    background:var(--bg);border:1.5px solid var(--border);border-radius:20px;
+    padding:38px 32px;display:flex;flex-direction:column;gap:16px;position:relative;
+  }
+  .path-card.highlight{border-color:rgba(212,175,55,0.5);box-shadow:0 0 0 1px rgba(212,175,55,0.15),0 20px 50px rgba(0,0,0,.4);}
+  .path-tag{
+    position:absolute;top:-13px;left:28px;background:var(--gold-2);color:#0c0f16;
+    font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    padding:5px 12px;border-radius:999px;
+  }
+  .path-icon{font-size:30px;}
+  .path-card h3{font-size:22px;font-weight:800;}
+  .path-card p.desc{color:var(--muted);font-size:15px;}
+  .path-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin:8px 0 10px;}
+  .path-list li{font-size:14.5px;color:var(--text);display:flex;gap:10px;align-items:flex-start;}
+  .path-list li::before{content:"✓";color:var(--green);font-weight:800;}
+  @media (max-width:760px){ .path-grid{grid-template-columns:1fr;} }
+
+  /* ---------- PLANS ---------- */
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .plan-card{
+    background:var(--bg2);border:1.5px solid var(--border);border-radius:18px;
+    padding:32px 28px;display:flex;flex-direction:column;gap:14px;position:relative;
+  }
+  .plan-card.featured{border-color:rgba(212,175,55,0.55);transform:translateY(-8px);}
+  .plan-card .path-tag{top:-13px;left:50%;transform:translateX(-50%);}
+  .plan-name{font-size:13px;color:var(--gold-2);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;}
+  .plan-price{font-size:38px;font-weight:800;}
+  .plan-price span{font-size:15px;color:var(--muted);font-weight:500;}
+  .plan-links{color:var(--muted);font-size:14px;margin-bottom:6px;}
+  .plan-feats{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:10px;}
+  .plan-feats li{font-size:14px;color:var(--text);display:flex;gap:9px;align-items:flex-start;}
+  .plan-feats li::before{content:"✓";color:var(--green);font-weight:800;}
+  @media (max-width:900px){ .plans-grid{grid-template-columns:1fr;} .plan-card.featured{transform:none;} }
+  .plans-note{text-align:center;color:var(--muted2);font-size:13px;margin-top:30px;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{
+    border-bottom:1px solid var(--border);padding:22px 0;cursor:pointer;
+  }
+  .faq-q{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:16px;}
+  .faq-q .chev{color:var(--gold-2);font-size:20px;transition:transform .2s ease;}
+  .faq-item.open .chev{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;color:var(--muted);font-size:14.5px;}
+  .faq-item.open .faq-a{max-height:240px;padding-top:14px;}
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    text-align:center;background:
+      radial-gradient(circle at 50% 0%, rgba(212,175,55,0.1), transparent 60%),
+      var(--bg2);
+    border-top:1px solid var(--border);
+  }
+  .final-cta h2{font-size:32px;font-weight:800;margin-bottom:16px;}
+  .final-cta p{color:var(--muted);margin-bottom:34px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:46px 0;border-top:1px solid var(--border);}
+  footer .wrap{display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;}
+  footer .f-brand{display:flex;align-items:center;gap:8px;font-weight:800;}
+  footer .f-brand svg{width:22px;height:22px;}
+  footer p{color:var(--muted2);font-size:12.5px;max-width:640px;}
+  footer .f-links{display:flex;gap:18px;font-size:13px;color:var(--muted);flex-wrap:wrap;justify-content:center;}
+
+  /* sticky mobile whatsapp bar */
+  .sticky-wa{
+    position:fixed;bottom:0;left:0;right:0;z-index:60;
+    background:var(--bg2);border-top:1px solid var(--border);
+    padding:12px 20px;display:none;
+    align-items:center;justify-content:space-between;gap:12px;
+  }
+  .sticky-wa .btn{flex:1;padding:12px;font-size:14px;}
+  @media (max-width:760px){ .sticky-wa{display:flex;} body{padding-bottom:70px;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="navgold" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#f8e8b0"/><stop offset="45%" stop-color="#d4af37"/><stop offset="100%" stop-color="#8c6c1f"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,6 L213,53 L213,142 L120,234 L27,142 L27,53 Z" fill="#0e121c" stroke="url(#navgold)" stroke-width="7"/>
+        <path d="M100,104 L100,90 C100,76 109,66 120,66 C131,66 140,76 140,90 L140,104" fill="none" stroke="url(#navgold)" stroke-width="8" stroke-linecap="round"/>
+        <rect x="84" y="100" width="72" height="62" rx="9" fill="#0e121c" stroke="url(#navgold)" stroke-width="5"/>
+        <circle cx="120" cy="127" r="8" fill="url(#navgold)"/><rect x="117" y="131" width="6" height="13" rx="2" fill="url(#navgold)"/>
+      </svg>
+      M2<span class="gold-text">SEC</span>
+    </div>
+    <div class="nav-links">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#caminhos">Atendimento</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">Dúvidas</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-whatsapp" href="https://wa.me/5561996447858?text=Oi!%20Quero%20fazer%20o%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="hero-icon" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="herogold" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#f8e8b0"/><stop offset="45%" stop-color="#d4af37"/><stop offset="100%" stop-color="#8c6c1f"/>
+        </linearGradient>
+      </defs>
+      <path d="M120,6 L213,53 L213,142 L120,234 L27,142 L27,53 Z" fill="#0e121c" stroke="url(#herogold)" stroke-width="6"/>
+      <path d="M100,104 L100,90 C100,76 109,66 120,66 C131,66 140,76 140,90 L140,104" fill="none" stroke="url(#herogold)" stroke-width="7" stroke-linecap="round"/>
+      <rect x="84" y="100" width="72" height="62" rx="9" fill="#0e121c" stroke="url(#herogold)" stroke-width="4.5"/>
+      <circle cx="120" cy="127" r="8" fill="url(#herogold)"/><rect x="117" y="131" width="6" height="13" rx="2" fill="url(#herogold)"/>
+    </svg>
+    <span class="pill" style="margin-top:22px;display:inline-block;">Baseado na LGPD</span>
+    <h1>Seu nome não deveria estar exposto no <span class="gold-text">Google, Escavador e Jusbrasil</span></h1>
+    <p class="lead">Fazemos a remoção legal dos seus dados pessoais dessas plataformas. Diagnóstico honesto da sua exposição digital em 10 minutos — sem compromisso.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-whatsapp" href="https://wa.me/5561996447858?text=Oi!%20Quero%20fazer%20o%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">📲 Diagnóstico grátis no WhatsApp</a>
+      <a class="btn btn-ghost" href="#planos">Ver planos</a>
+    </div>
+    <div class="hero-trust">🔒 Atendimento sigiloso · Sem letras miúdas · Cancele quando quiser</div>
+  </div>
+</header>
+
+<div class="proof-strip">
+  <div class="wrap">
+    <div><strong>LGPD</strong> — Lei Geral de Proteção de Dados</div>
+    <div><strong>100%</strong> remoto, pelo WhatsApp</div>
+    <div><strong>Diagnóstico</strong> gratuito e sem compromisso</div>
+  </div>
+</div>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="pill">Como funciona</span>
+      <h2>Três passos até seu nome sumir dessas plataformas</h2>
+      <p>Simples pra você, sistemático por trás — sem burocracia, sem juridiquês.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Diagnóstico gratuito</h3>
+        <p>Você fala com a gente (ou preenche o formulário) e mostramos exatamente onde seus dados estão expostos.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Você escolhe o caminho</h3>
+        <p>Atendimento personalizado pelo WhatsApp, ou um plano self-service se forem mais de 2 links pra remover.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Nós cuidamos da remoção</h3>
+        <p>Fazemos as solicitações formais com base na LGPD e te damos satisfação de cada etapa até a confirmação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paths" id="caminhos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="pill">Dois caminhos</span>
+      <h2>Escolha como quer ser atendido</h2>
+      <p>Nenhum dos dois é "pior" — depende do seu caso.</p>
+    </div>
+    <div class="path-grid">
+      <div class="path-card">
+        <div class="path-icon">💬</div>
+        <h3>Atendimento personalizado</h3>
+        <p class="desc">Ideal pra até 2 links, casos específicos, ou se você só quer conversar com uma pessoa de verdade antes de decidir.</p>
+        <ul class="path-list">
+          <li>Conversa direta com um especialista</li>
+          <li>Análise do seu caso específico</li>
+          <li>Sem compromisso de compra</li>
+        </ul>
+        <a class="btn btn-whatsapp" href="https://wa.me/5561996447858?text=Oi!%20Quero%20atendimento%20personalizado" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="path-card highlight">
+        <span class="path-tag">Mais vantajoso p/ 3+ links</span>
+        <div class="path-icon">⚡</div>
+        <h3>Fluxo automatizado</h3>
+        <p class="desc">Escolha um plano, pague online e nosso processo sistemático cuida de tudo — mais rápido e mais em conta por link removido.</p>
+        <ul class="path-list">
+          <li>Preço fechado por plano</li>
+          <li>Processo automatizado e rastreável</li>
+          <li>Ideal pra quem tem vários links</li>
+        </ul>
+        <a class="btn btn-gold" href="#planos">Ver planos e preços</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="planos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="pill">Planos</span>
+      <h2>Preço fechado, sem surpresa</h2>
+      <p>Quanto mais links, mais vale a pena o plano em vez do atendimento avulso.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Essencial</div>
+        <div class="plan-price">R$ ---<span>/único</span></div>
+        <div class="plan-links">Até 3 links</div>
+        <ul class="plan-feats">
+          <li>Remoção em até 3 plataformas</li>
+          <li>Acompanhamento por WhatsApp</li>
+          <li>Relatório de conclusão</li>
+        </ul>
+        <a class="btn btn-ghost" href="#" data-plan="essencial">Escolher Essencial</a>
+      </div>
+      <div class="plan-card featured">
+        <span class="path-tag">Mais escolhido</span>
+        <div class="plan-name">Profissional</div>
+        <div class="plan-price">R$ ---<span>/único</span></div>
+        <div class="plan-links">Até 7 links</div>
+        <ul class="plan-feats">
+          <li>Remoção em até 7 plataformas</li>
+          <li>Prioridade na fila de processamento</li>
+          <li>Acompanhamento por WhatsApp</li>
+          <li>Relatório de conclusão</li>
+        </ul>
+        <a class="btn btn-gold" href="#" data-plan="profissional">Escolher Profissional</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Completo</div>
+        <div class="plan-price">R$ ---<span>/único</span></div>
+        <div class="plan-links">Links ilimitados*</div>
+        <ul class="plan-feats">
+          <li>Remoção ilimitada no período contratado</li>
+          <li>Prioridade máxima</li>
+          <li>Suporte dedicado</li>
+          <li>Relatório de conclusão</li>
+        </ul>
+        <a class="btn btn-ghost" href="#" data-plan="completo">Escolher Completo</a>
+      </div>
+    </div>
+    <p class="plans-note">*Sujeito a análise de viabilidade por caso. Pagamento processado via Mercado Pago (Pix ou cartão). Preços a confirmar.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="pill">Dúvidas</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list" style="max-width:720px;margin:0 auto;">
+      <div class="faq-item">
+        <div class="faq-q"><span>Isso é golpe?</span><span class="chev">+</span></div>
+        <div class="faq-a">Não. A remoção de dados pessoais é um direito garantido pela LGPD (Lei Geral de Proteção de Dados). Fazemos as solicitações formais em seu nome, com total transparência.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Funciona mesmo?</span><span class="chev">+</span></div>
+        <div class="faq-a">Sim — cada plataforma tem um processo próprio de solicitação de remoção, que seguimos à risca. Você recebe um relatório de conclusão de cada remoção.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Quanto tempo demora?</span><span class="chev">+</span></div>
+        <div class="faq-a">Varia por plataforma, mas normalmente leva alguns dias úteis após o envio da solicitação. Te mantemos informado em cada etapa.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Preciso pagar pra fazer o diagnóstico?</span><span class="chev">+</span></div>
+        <div class="faq-a">Não. O diagnóstico inicial, pelo WhatsApp, é 100% gratuito e sem compromisso.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Meus dados ficam seguros com vocês?</span><span class="chev">+</span></div>
+        <div class="faq-a">Sim. Usamos seus dados exclusivamente para realizar as solicitações de remoção, seguindo as mesmas diretrizes de proteção de dados que defendemos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Pronto pra tirar seu nome dessas plataformas?</h2>
+    <p>Comece com um diagnóstico gratuito — sem compromisso, sem letra miúda.</p>
+    <a class="btn btn-whatsapp" href="https://wa.me/5561996447858?text=Oi!%20Quero%20fazer%20o%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">📲 Falar no WhatsApp agora</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="footgold" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#f8e8b0"/><stop offset="45%" stop-color="#d4af37"/><stop offset="100%" stop-color="#8c6c1f"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,6 L213,53 L213,142 L120,234 L27,142 L27,53 Z" fill="#0e121c" stroke="url(#footgold)" stroke-width="7"/>
+        <path d="M100,104 L100,90 C100,76 109,66 120,66 C131,66 140,76 140,90 L140,104" fill="none" stroke="url(#footgold)" stroke-width="8" stroke-linecap="round"/>
+        <rect x="84" y="100" width="72" height="62" rx="9" fill="#0e121c" stroke="url(#footgold)" stroke-width="5"/>
+        <circle cx="120" cy="127" r="8" fill="url(#footgold)"/><rect x="117" y="131" width="6" height="13" rx="2" fill="url(#footgold)"/>
+      </svg>
+      M2SEC Security
+    </div>
+    <div class="f-links">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="mailto:contato@m2sec.com.br">contato@m2sec.com.br</a>
+      <a href="https://www.instagram.com/m2sec_security/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p>A M2SEC Security realiza solicitações de remoção de dados pessoais com base na Lei Geral de Proteção de Dados (Lei 13.709/2018). Não garantimos remoção em prazo específico, pois depende da análise de cada plataforma. © 2026 M2SEC Security. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<div class="sticky-wa">
+  <a class="btn btn-whatsapp" href="https://wa.me/5561996447858?text=Oi!%20Quero%20fazer%20o%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">📲 Diagnóstico grátis</a>
+  <a class="btn btn-gold" href="#planos">Ver planos</a>
+</div>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){ o.classList.remove('open'); });
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // Plan selection placeholder (Mercado Pago integration = fase 2)
+  document.querySelectorAll('[data-plan]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var plan = btn.getAttribute('data-plan');
+      alert('Checkout do plano "' + plan + '" ainda não está integrado.\n\nPor enquanto, fale com a gente no WhatsApp pra contratar esse plano.');
+      window.open('https://wa.me/5561996447858?text=Oi!%20Quero%20contratar%20o%20plano%20' + encodeURIComponent(plan), '_blank');
+    });
+  });
+</script>
+
+</body>
+</html>
