@@ -336,7 +336,7 @@
     <div class="plans-grid">
       <div class="plan-card">
         <div class="plan-name">Essencial</div>
-        <div class="plan-price">R$ ---<span>/único</span></div>
+        <div class="plan-price">R$ 297<span>/único</span></div>
         <div class="plan-links">Até 3 links</div>
         <ul class="plan-feats">
           <li>Remoção em até 3 plataformas</li>
@@ -348,7 +348,7 @@
       <div class="plan-card featured">
         <span class="path-tag">Mais escolhido</span>
         <div class="plan-name">Profissional</div>
-        <div class="plan-price">R$ ---<span>/único</span></div>
+        <div class="plan-price">R$ 597<span>/único</span></div>
         <div class="plan-links">Até 7 links</div>
         <ul class="plan-feats">
           <li>Remoção em até 7 plataformas</li>
@@ -360,7 +360,7 @@
       </div>
       <div class="plan-card">
         <div class="plan-name">Completo</div>
-        <div class="plan-price">R$ ---<span>/único</span></div>
+        <div class="plan-price">R$ 997<span>/único</span></div>
         <div class="plan-links">Links ilimitados*</div>
         <ul class="plan-feats">
           <li>Remoção ilimitada no período contratado</li>
@@ -371,7 +371,7 @@
         <a class="btn btn-ghost" href="#" data-plan="completo">Escolher Completo</a>
       </div>
     </div>
-    <p class="plans-note">*Sujeito a análise de viabilidade por caso. Pagamento processado via Mercado Pago (Pix ou cartão). Preços a confirmar.</p>
+    <p class="plans-note">*Sujeito a análise de viabilidade por caso. Pagamento processado com segurança via Mercado Pago (Pix, cartão ou boleto).</p>
   </div>
 </section>
 
@@ -456,13 +456,37 @@
     });
   });
 
-  // Plan selection placeholder (Mercado Pago integration = fase 2)
+  // Plan selection -> cria preferência de pagamento no Mercado Pago e redireciona pro checkout
+  var CHECKOUT_API = 'https://d5g44klaza.execute-api.us-east-1.amazonaws.com/create-preference';
+
   document.querySelectorAll('[data-plan]').forEach(function(btn){
+    var originalLabel = btn.textContent;
     btn.addEventListener('click', function(e){
       e.preventDefault();
+      if (btn.dataset.loading === '1') return;
+      btn.dataset.loading = '1';
+      btn.textContent = 'Carregando...';
+
       var plan = btn.getAttribute('data-plan');
-      alert('Checkout do plano "' + plan + '" ainda não está integrado.\n\nPor enquanto, fale com a gente no WhatsApp pra contratar esse plano.');
-      window.open('https://wa.me/5561996447858?text=Oi!%20Quero%20contratar%20o%20plano%20' + encodeURIComponent(plan), '_blank');
+      fetch(CHECKOUT_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ plan: plan })
+      })
+        .then(function(res){
+          if (!res.ok) throw new Error('checkout_error');
+          return res.json();
+        })
+        .then(function(data){
+          if (!data.init_point) throw new Error('no_init_point');
+          window.location.href = data.init_point;
+        })
+        .catch(function(err){
+          console.error('Falha ao iniciar checkout', err);
+          btn.dataset.loading = '0';
+          btn.textContent = originalLabel;
+          alert('Não foi possível abrir o checkout agora. Tenta de novo em instantes ou fala com a gente no WhatsApp.');
+        });
     });
   });
 </script>
