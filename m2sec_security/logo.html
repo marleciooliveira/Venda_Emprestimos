@@ -17,7 +17,6 @@
     position: relative;
     overflow: hidden;
   }
-  /* subtle vignette ring for depth */
   body::before {
     content: "";
     position: absolute;
@@ -27,6 +26,17 @@
     border: 1px solid rgba(212,175,55,0.12);
     top: 50px;
   }
+  /* faint binary texture corners */
+  .bin {
+    position: absolute;
+    font-family: 'Consolas', monospace;
+    color: rgba(212,175,55,0.08);
+    font-size: 22px;
+    letter-spacing: 4px;
+    white-space: nowrap;
+  }
+  .bin1 { top: 90px; left: 90px; }
+  .bin2 { bottom: 90px; right: 90px; }
   .card {
     text-align: center;
     position: relative;
@@ -56,9 +66,9 @@
   .subtitle {
     margin-top: 10px;
     color: #c9ced9;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 600;
-    letter-spacing: 12px;
+    letter-spacing: 9px;
     text-transform: uppercase;
   }
   .rule {
@@ -69,16 +79,19 @@
   }
   .tag {
     color: #9aa1b0;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 500;
     letter-spacing: 2px;
   }
 </style>
 </head>
 <body>
+  <div class="bin bin1">01001 11010 00101</div>
+  <div class="bin bin2">10110 01011 10011</div>
+
   <div class="card">
     <div class="icon-wrap">
-      <svg width="300" height="300" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+      <svg width="300" height="300" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stop-color="#f8e8b0"/>
@@ -96,43 +109,50 @@
           </linearGradient>
         </defs>
 
-        <!-- shield body -->
-        <path d="M100,8
-                 C130,8 160,20 180,35
-                 L180,112
-                 C180,168 145,208 100,233
-                 C55,208 20,168 20,112
-                 L20,35
-                 C40,20 70,8 100,8 Z"
+        <!-- hexagonal tech-shield badge -->
+        <path d="M120,6 L213,53 L213,142 L120,234 L27,142 L27,53 Z"
               fill="url(#shieldFill)"
               stroke="url(#gold)"
               stroke-width="5"/>
-
-        <!-- inner silver hairline -->
-        <path d="M100,18
-                 C126,18 152,28 169,41
-                 L169,111
-                 C169,160 139,196 100,219
-                 C61,196 31,160 31,111
-                 L31,41
-                 C48,28 74,18 100,18 Z"
+        <path d="M120,20 L199,60 L199,137 L120,216 L41,137 L41,60 Z"
               fill="none"
               stroke="url(#silver)"
-              stroke-width="1.5"
-              opacity="0.5"/>
+              stroke-width="1.4"
+              opacity="0.45"/>
 
-        <!-- padlock -->
-        <rect x="76" y="118" width="48" height="40" rx="7" fill="url(#gold)"/>
-        <path d="M84,118 L84,100 C84,87 93,78 100,78 C107,78 116,87 116,100 L116,118"
-              fill="none" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"/>
-        <circle cx="100" cy="135" r="6" fill="#0e121c"/>
-        <rect x="97" y="138" width="6" height="12" rx="2" fill="#0e121c"/>
+        <!-- circuit traces converging to center chip -->
+        <g stroke="url(#gold)" stroke-width="2.4" fill="none" opacity="0.9">
+          <path d="M120,34 L120,76"/>
+          <path d="M70,66 L96,88"/>
+          <path d="M170,66 L144,88"/>
+          <path d="M60,118 L92,118"/>
+          <path d="M180,118 L148,118"/>
+          <path d="M80,172 L100,150"/>
+          <path d="M160,172 L140,150"/>
+        </g>
+        <g fill="url(#gold)">
+          <circle cx="120" cy="34" r="4"/>
+          <circle cx="70" cy="66" r="4"/>
+          <circle cx="170" cy="66" r="4"/>
+          <circle cx="60" cy="118" r="4"/>
+          <circle cx="180" cy="118" r="4"/>
+          <circle cx="80" cy="172" r="4"/>
+          <circle cx="160" cy="172" r="4"/>
+        </g>
+
+        <!-- central data-chip with keyhole -->
+        <rect x="90" y="88" width="60" height="60" rx="10"
+              fill="url(#shieldFill)" stroke="url(#gold)" stroke-width="3.5"/>
+        <rect x="102" y="100" width="36" height="36" rx="4"
+              fill="none" stroke="url(#silver)" stroke-width="1.2" opacity="0.55"/>
+        <path d="M120,110 a9,9 0 1 1 -0.1,0 Z M120,119 l0,14"
+              fill="none" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
       </svg>
     </div>
     <div class="name">M2<span>SEC</span></div>
-    <div class="subtitle">Security</div>
+    <div class="subtitle">Cyber Security</div>
     <div class="rule"></div>
-    <div class="tag">PROTEÇÃO · AUTORIDADE · CONFIANÇA</div>
+    <div class="tag">DADOS · INFRAESTRUTURA · CONFIANÇA</div>
   </div>
 </body>
 </html>
